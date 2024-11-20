@@ -8,7 +8,6 @@
         <!--Entities-->
         <class>pe.edu._201921060.entidades.city</class>
         <class>pe.edu._201921060.entidades.country</class>
-
         <class>pe.edu._201921060.entidades.countrylanguage</class>
 
 

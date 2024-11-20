@@ -1,9 +1,8 @@
 package pe.edu._201921060.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class country {
@@ -27,6 +26,13 @@ public class country {
     private String HeadOfState;
     private Integer Capital;
     private String Code2;
+
+    @OneToMany(mappedBy = "Country",cascade = {CascadeType.REMOVE,CascadeType.REMOVE},orphanRemoval = true)
+    private List<city> villes;
+
+    @OneToMany(mappedBy = "Country",cascade = {CascadeType.REMOVE,CascadeType.REMOVE},orphanRemoval = true)
+    private List<countrylanguage> clanguages;
+
 
     public enum Continent {
         AFRICA, EUROPE, ASIA, AMERICAS, OCEANIA, ANTARCTICA

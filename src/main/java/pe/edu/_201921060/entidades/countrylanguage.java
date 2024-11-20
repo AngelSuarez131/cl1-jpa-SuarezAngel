@@ -1,17 +1,20 @@
 package pe.edu._201921060.entidades;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class countrylanguage {
 
+
     @Id
-    private String CountryCode;
     private String Language;
     private Isofficial IsOfficial;
     private Double Percentage;
+
+    @ManyToOne(cascade ={CascadeType.PERSIST,CascadeType.REMOVE})
+    @JoinColumn(name = "CountryCode",nullable = false)
+    private country Country;
 
     public enum Isofficial {
         T, F;
@@ -20,30 +23,32 @@ public class countrylanguage {
     public countrylanguage() {
     }
 
-    public countrylanguage(String countryCode, String language, Isofficial isOfficial, Double percentage) {
-        CountryCode = countryCode;
+    public countrylanguage(String language, Isofficial isOfficial, Double percentage, country country) {
         Language = language;
         IsOfficial = isOfficial;
         Percentage = percentage;
+        Country = country;
     }
 
     @Override
     public String toString() {
         return "countrylanguage{" +
-                "CountryCode='" + CountryCode + '\'' +
-                ", Language='" + Language + '\'' +
+                "Language='" + Language + '\'' +
                 ", IsOfficial=" + IsOfficial +
                 ", Percentage=" + Percentage +
+                ", Country=" + Country +
                 '}';
     }
 
-    public String getCountryCode() {
-        return CountryCode;
+    public country getCountry() {
+        return Country;
     }
 
-    public void setCountryCode(String countryCode) {
-        CountryCode = countryCode;
+    public void setCountry(country country) {
+        Country = country;
     }
+
+
 
     public String getLanguage() {
         return Language;

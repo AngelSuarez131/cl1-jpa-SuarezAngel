@@ -1,27 +1,30 @@
 package pe.edu._201921060.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class city {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
     private String Name;
-    private String CountryCode;
     private String District;
     private Integer Population;
+
+    @ManyToOne(cascade ={CascadeType.PERSIST,CascadeType.REMOVE})
+    @JoinColumn(name = "CountryCode",nullable = false)
+    private country Country;
 
     public city() {
     }
 
-    public city(Integer ID, String name, String countryCode, String district, Integer population) {
+    public city(Integer ID, String name, String district, Integer population, country country) {
         this.ID = ID;
         Name = name;
-        CountryCode = countryCode;
         District = district;
         Population = population;
+        Country = country;
     }
 
     @Override
@@ -29,10 +32,18 @@ public class city {
         return "city{" +
                 "ID=" + ID +
                 ", Name='" + Name + '\'' +
-                ", CountryCode='" + CountryCode + '\'' +
                 ", District='" + District + '\'' +
                 ", Population=" + Population +
+                ", Country=" + Country +
                 '}';
+    }
+
+    public country getCountry() {
+        return Country;
+    }
+
+    public void setCountry(country country) {
+        Country = country;
     }
 
     public Integer getID() {
@@ -51,13 +62,7 @@ public class city {
         Name = name;
     }
 
-    public String getCountryCode() {
-        return CountryCode;
-    }
 
-    public void setCountryCode(String countryCode) {
-        CountryCode = countryCode;
-    }
 
     public String getDistrict() {
         return District;
