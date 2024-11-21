@@ -11,9 +11,8 @@ public class country {
     private String Code;
     private String Name;
 
-    @Enumerated(EnumType.STRING)
-    private Continent continent;
 
+    private String continent;
     private String Region;
     private Double SurfaceArea;
     private Integer IndepYear;
@@ -34,14 +33,28 @@ public class country {
     private List<countrylanguage> clanguages;
 
 
-    public enum Continent {
-        AFRICA, EUROPE, ASIA, AMERICAS, OCEANIA, ANTARCTICA
-    }
+
 
     public country() {
     }
 
-    public country(String code, String name, Continent continent, String region, Double surfaceArea, Integer indepYear, Integer population, Double lifeExpectancy, Double GNP, Double GNPOld, String localName, String governmentForm, String headOfState, Integer capital, String code2) {
+    public List<city> getVilles() {
+        return villes;
+    }
+
+    public void setVilles(List<city> villes) {
+        this.villes = villes;
+    }
+
+    public List<countrylanguage> getClanguages() {
+        return clanguages;
+    }
+
+    public void setClanguages(List<countrylanguage> clanguages) {
+        this.clanguages = clanguages;
+    }
+
+    public country(String code, String name, String continent, String region, Double surfaceArea, Integer indepYear, Integer population, Double lifeExpectancy, Double GNP, Double GNPOld, String localName, String governmentForm, String headOfState, Integer capital, String code2) {
         Code = code;
         Name = name;
         this.continent = continent;
@@ -96,11 +109,11 @@ public class country {
         Name = name;
     }
 
-    public Continent getContinent() {
+    public String getContinent() {
         return continent;
     }
 
-    public void setContinent(Continent continent) {
+    public void setContinent(String continent) {
         this.continent = continent;
     }
 

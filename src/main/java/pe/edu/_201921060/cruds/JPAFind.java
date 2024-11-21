@@ -5,15 +5,15 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import pe.edu._201921060.entidades.country;
 
-public class JPARemove {
+public class JPAFind {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("p02");
         EntityManager em = emf.createEntityManager();
 
-        country c = em.find(country.class,"ASO");
+        country cont = em.find(country.class,"PER");
 
-        em.getTransaction().begin();
-        em.remove(c);
-        em.getTransaction().commit();
+        cont.getVilles().stream().filter(city -> city.getPopulation()>=700000).forEach(System.out::println);
+
+
     }
 }

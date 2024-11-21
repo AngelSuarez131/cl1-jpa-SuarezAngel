@@ -7,7 +7,7 @@ import pe.edu._201921060.entidades.city;
 import pe.edu._201921060.entidades.country;
 import pe.edu._201921060.entidades.countrylanguage;
 
-import static pe.edu._201921060.entidades.country.Continent.EUROPE;
+
 import static pe.edu._201921060.entidades.countrylanguage.Isofficial.T;
 
 public class JPAPersist {
@@ -15,7 +15,7 @@ public class JPAPersist {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("p02");
         EntityManager em = emf.createEntityManager();
 
-        country cont = new country("ASO","Pays",EUROPE,"Europa",
+        country cont = new country("ASO","Pays","Europe","Europa",
                 250.0,1650,1,10.1,500.0,500.0,"Pays","Republic","Moi",100,"TO");
 
         city v1 = new city(1,"Ville","Herat",1,cont);

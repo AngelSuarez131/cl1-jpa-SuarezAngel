@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a75aad40-d836-4916-a337-0d1a33a22cc7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPAPersist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPARemove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPAFind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/city.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/city.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPAPersist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPAPersist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPARemove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/cruds/JPARemove.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/countrylanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pe/edu/_201921060/entidades/countrylanguage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +26,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2p60zGEpHevI7RP8qKNAXkdvzlr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -39,16 +37,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.JPAFind.executor": "Run",
     "Application.JPAPersist.executor": "Run",
     "Application.JPARemove.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/lilic/OneDrive/Documents/Ciber 2024-2/4694 DESARROLLO DE APLICACIONES WEB I/Workspace/jpa-lmp",
     "onboarding.tips.debug.path": "C:/Users/lilic/OneDrive/Documents/Ciber 2024-2/4694 DESARROLLO DE APLICACIONES WEB I/Workspace/cl1-jpa-SuarezAngel/src/main/java/pe/edu/_201921060/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.JPARemove">
+  <component name="RunManager" selected="Application.JPAFind">
+    <configuration name="JPAFind" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pe.edu._201921060.cruds.JPAFind" />
+      <module name="cl1-jpa-SuarezAngel" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pe.edu._201921060.cruds.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JPAPersist" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pe.edu._201921060.cruds.JPAPersist" />
       <module name="cl1-jpa-SuarezAngel" />
@@ -77,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JPAFind" />
         <item itemvalue="Application.JPARemove" />
         <item itemvalue="Application.JPAPersist" />
       </list>
